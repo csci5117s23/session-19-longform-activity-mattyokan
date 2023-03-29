@@ -1,5 +1,5 @@
 .App {
-  margin:10%;
+  margin: 10%;
 }
 
 .App-logo {
@@ -43,8 +43,11 @@
   justify-content: center;
   align-content: center;
   padding: 128px 16px;
+  font-size: 2rem;
   background-color: #e5eef1;
   flex-grow: 1;
+  user-select: none;
+  cursor: pointer;
 }
 
 .card-viewer {
@@ -57,5 +60,22 @@
 .card-viewer .button {
   color: #215562;
   font-weight: 600;
-  padding: 8px;
+  padding: 12px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin: 0 8px;
+  user-select: none;
+  cursor: pointer;
+  transition: transform ease-in-out 0.2s;
+}
+
+.button.selectable:hover {
+  color: #11738a;
+  transform: scale(1.1);
+}
+
+.card-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
