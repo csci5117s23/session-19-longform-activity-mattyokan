@@ -36,3 +36,26 @@
     transform: rotate(360deg);
   }
 }
+
+
+.flashcard {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 128px 16px;
+  background-color: #e5eef1;
+  flex-grow: 1;
+}
+
+.card-viewer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-viewer .button {
+  color: #215562;
+  font-weight: 600;
+  padding: 8px;
+}
