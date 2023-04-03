@@ -10,14 +10,20 @@ function App() {
         {front: "question3", back: "answer3"},
     ])
 
+    const deleteCard = (card) => {
+        setQuestions(questions.filter(c => c !== card))
+    }
+
+    const addCard = (front, back) => {
+        let current = [...questions]
+        current.push({ front: front, back: back})
+        setQuestions(current)
+    }
+
     return (
         <div className="App">
-            <FlashCardList questions={questions}/>
-            <CardForm addCard={(front, back) => {
-                let current = questions
-                current.push({front: front, back: back})
-                setQuestions(current)
-            }}/>
+            <FlashCardList questions={questions} deleteCard={deleteCard} />
+            <CardForm addCard={addCard}/>
         </div>
     );
 }

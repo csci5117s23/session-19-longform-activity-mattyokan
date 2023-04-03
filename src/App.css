@@ -41,13 +41,35 @@
 .flashcard {
   display: flex;
   justify-content: center;
-  align-content: center;
-  padding: 128px 16px;
+  align-items: center;
   font-size: 2rem;
   background-color: #e5eef1;
   flex-grow: 1;
   user-select: none;
   cursor: pointer;
+
+  min-width: 20em;
+  max-width: 20em;
+  min-height: 12em;
+  max-height: 12em;
+}
+
+.flashcard-container .delete {
+  position: relative;
+  z-index: 2;
+  top: 40px;
+  left: 10px;
+  background-color: #B71C1C;
+  border: 2px solid #801313;
+  border-radius: 4px;
+  color: white;
+  font-weight: 600;
+  padding: 4px 8px;
+  font-size: 14px;
+}
+
+.flashcard .front {
+  font-weight: 600;
 }
 
 .card-viewer {
@@ -74,8 +96,22 @@
   transform: scale(1.1);
 }
 
+.button.end {
+  background-color: rgba(199, 40, 40, 0.1);
+  color: #C62828;
+}
+
 .card-form {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  text-align: center;
+}
+
+.no-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 600;
 }
